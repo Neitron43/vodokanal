@@ -30,7 +30,6 @@ ul li{list-style: none;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 .user-select--pc {
     color: #fff;
@@ -608,6 +607,12 @@ footer {
 }
 .footer-nav {
     max-width: 250px;
+}
+.footer-nav__list a {
+    color: #E7E7E7;
+}
+.footer-nav__header a, .footer-nav__header--secondary a {
+    color: #fff;
 }
 .footer-nav-privacy {
     color: #fff;
