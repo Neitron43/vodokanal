@@ -608,10 +608,10 @@ footer {
 .footer-nav {
     max-width: 250px;
 }
-.footer-nav__list a {
+.footer-nav__list a, .footer-nav__list a:visited {
     color: #E7E7E7;
 }
-.footer-nav__header a, .footer-nav__header--secondary a {
+.footer-nav__header a, .footer-nav__header--secondary a, .footer-nav__header a:visited, .footer-nav__header--secondary a:visited {
     color: #fff;
 }
 .footer-nav-privacy {
