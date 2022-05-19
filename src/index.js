@@ -1,3 +1,5 @@
+import './style.css'
+
 const sliders = document.querySelectorAll('.swiper')
 sliders.forEach((el) => {
   let mySwiper = new Swiper(el, {
@@ -178,5 +180,14 @@ iconMobile.addEventListener('click', () => {
   headerMobile.classList.toggle('_active')
   iconMobile.classList.toggle('_active')
   document.body.classList.toggle('lock')
+})
+
+const menuStripe = document.querySelector('.menu__stripe')
+menuStripe.addEventListener('touchmove', () => {
+  if (headerMobile.className == ('header-mobile _active')) {
+    headerMobile.classList.toggle('_active')
+    iconMobile.classList.toggle('_active')
+    document.body.classList.toggle('lock')
+  }
 })
 
