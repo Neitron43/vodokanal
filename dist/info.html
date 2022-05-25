@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/dcbe448426e2753df2bb.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
-    <title>Водоканал</title>
+    <title>Руководство</title>
 <script defer src="main.js"></script></head>
 <body>
     <header>
@@ -229,191 +224,96 @@
             </div>
         </div>
     </header>
-    <section class="slider">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide main first">
-                <div class="slide-wrapper">
-                    <h1>Водоканал - неотъемлемая часть города</h1>
-                </div>
-              </div>
-              <div class="swiper-slide main second">Slide 2</div>
-              <div class="swiper-slide main third">Slide 3</div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-    </section>
-    <section class="info">
+    <section class="block about">
+        <div class="block__background"></div>
         <div class="wrapper">
-            <div class="info-upper">
-                <div class="info-upper-left card">
-                    <h3>Передача показаний через Telegram-bot</h3>
-                    <img  src="assets/4525ebefa129b81955b5.png">
-                </div>
-                <div class="info-upper-right">
-                    <div class="info-upper-right-top card">
-                        <img src="assets/54ab3dd4658a26d679dc.svg">
-                        <div>
-                            <h3>Передача показаний через сайт</h3>
-                            <p>Передача показаний производится быстро и просто </p>
-                        </div>
-                    </div>
-                    <div class="info-upper-right-bottom">
-                        <div class="info-upper-right-bottom-left card">
-                            <img src="assets/1399a97290ce06693d4e.svg">
-                            <h3>Часто задаваемые вопросы</h3>
-                        </div>
-                        <div class="info-upper-right-bottom-right card">
-                            <img src="assets/2a2c686a9403e52bd7d9.svg">
-                            <h3>Федеральная программа “Чистая вода”</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="info-bottom">
-                <div class="info-bottom-left">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide info">
-                            <img class="slide__img--receipt"src="assets/8103ba4b32dcf6ac36cd.svg">
-                                <div class="slide-info">
-                                <p>Оплати квитанцию и получи возврат денежных средств</p>
-                                <button>Подробнее</button>
-                                </div>
-                            </div>
-                            <div class="swiper-slide info">
-                                <img class="slide__img--receipt"src="assets/8103ba4b32dcf6ac36cd.svg">
-                                    <div class="slide-info">
-                                    <p>Оплати квитанцию и получи </p>
-                                    <button>Подробнее</button>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>    
-                <div class="info-bottom-right">
-                    <form>
-                    <h5>Выберите адрес:</h5>
-                    <select name="adress" class="adress-select">
-                        <option value="Vorovskogo">Воровского</option>
-                        <option value="Militseyskaya">Милицейская</option>
-                    </select>
-                    </form>
-                    <h5 class="info-timetable__header">Режим работы отдела по работе с физическими лицами:</h5>
-                    <div class="info-timetable str1 active">
-                        <ul class="info-timetable--weekdays">
-                            <li>
-                                <span class="timetable__span weekday">Пн:</span>
-                                <p class="timetable__ph">8:00 - 18:00</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Вт:</span>
-                                <p class="timetable__ph">8:00 - 18:00</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Ср:</span>
-                                <p class="timetable__ph">8:00 - 16:30</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Чт:</span>
-                                <p class="timetable__ph">8:00 - 18:00</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Пт:</span>
-                                <p class="timetable__ph">8:00 - 17:00</p>
-                            </li>
-                        </ul>
-                        <ul class="info-timetable--weekends">
-                            <li>
-                                <span class="timetable__span weekend">Сб:</span>
-                                <p class="timetable__ph">Выходной</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekend">Вс:</span>
-                                <p class="timetable__ph">Выходной</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="info-timetable str2">
-                        <ul class="info-timetable--weekdays">
-                            <li>
-                                <span class="timetable__span weekday">Пн:</span>
-                                <p class="timetable__ph">Вставьте своё время</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Вт:</span>
-                                <p class="timetable__ph">8:00 - 18:00</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Ср:</span>
-                                <p class="timetable__ph">8:00 - 16:30</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Чт:</span>
-                                <p class="timetable__ph">8:00 - 18:00</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekday">Пт:</span>
-                                <p class="timetable__ph">8:00 - 17:00</p>
-                            </li>
-                        </ul>
-                        <ul class="info-timetable--weekends">
-                            <li>
-                                <span class="timetable__span weekend">Сб:</span>
-                                <p class="timetable__ph">Выходной</p>
-                            </li>
-                            <li>
-                                <span class="timetable__span weekend">Вс:</span>
-                                <p class="timetable__ph">Выходной</p>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="block__head about">
+                <h2>О предприятии</h2>
+                <img src="assets/4dc4ef8912f2c7f22f2c.svg">
+                <div class="block__path about">
+                    <a href="/">Главная</a>
+                    <span>~</span>
+                    <a href="/">О предприятии</a>
+                    <span>~</span>
+                    <p>Раскрытие информации</p>
                 </div>
             </div>
         </div>
-    </section>
-    <div class="wrapper">
-        <hr class="hr--main">
-    </div>  
-    <section class="news">
-        <div class="wrapper">
-            <div class="news-head">
-                <h2>Новости</h2>
-                <a>Все новости</a>
-            </div>
-            <div class="news-blocks">
-                <div class="news__block block">
-                    <img src="assets/8a70e4310b4d1f261eec.png">
-                    <div class="block-info">
-                    <h3><a href="#">МУП «Водоканал» контролирует качество воды</a></h3>
-                    <p>13.02.2022</p>
-                    <a href="#" class="block__link">Перейти</a>
-                    </div>
+        <div class="wrapper main">
+            <div class="block__main about">
+                <div class="block__buttons about">
+                    <form action="/about.html"><button class="button--main"><p>Руководство</p></button></form>
+                    <form action="/"><button class="button--main"><p>Структура</p></button></form>
+                    <form action="/"><button class="button--main"><p>Контакты</p></button></form>
+                    <form action="/"><button class="button--main"><p>Вакансии</p></button></form>
+                    <form action="/"><button class="button--main"><p>Раскрытие информации</p></button></form>
+                    <form action="/"><button class="button--main active"><p>История предприятия</p></button></form>
+                    <form action="/"><button class="button--main"><p>Отзывы</p></button></form>
+                    <button class="button--additional">
+                        <img src="assets/8103ba4b32dcf6ac36cd.svg">
+                        <p>Оплати квитанцию и получи возврат денежных средств</p>
+                    </button>
                 </div>
-                <div class="news__block block">
-                    <img src="assets/76975914ad0e7b515996.png">
-                    <div class="block-info">
-                    <h3><a href="#">МУП «Водоканал» сделал очередные шаги вперед</a></h3>
-                    <p>13.02.2022</p>
-                    <a href="#" class="block__link">Перейти</a>
+                <div class="block__info information">
+                    <hr>
+                    <h3>FAQ</h3>
+                    <hr>
+                    <div class="block__accordion information">
+                        <button class="info__button">
+                            <p>Как справиться с экзистенциальным кризисом?</p>
+                            <img src="assets/8453b3379177983932f6.svg">
+                        </button>
+                        <div class="block__accordion subinformation">
+                            <button class="info__subbutton">
+                                <p>Как справиться с экзистенциальным кризисом?</p>
+                                <img src="assets/8453b3379177983932f6.svg">
+                            </button>
+                            <div class="info__subsubblock">
+                               <a>Отчет за 2002 год</a> 
+                            </div>
+                        </div>
+                        <div class="block__accordion subinformation">
+                            <button class="info__subbutton">
+                                <p>Как справиться с экзистенциальным кризисом?</p>
+                                <img src="assets/8453b3379177983932f6.svg">
+                            </button>
+                            <div class="info__subsubblock">
+                               <a>Отчет за 2002 год</a> 
+                            </div>
+                        </div>
+                        <div class="block__accordion subinformation">
+                            <button class="info__subbutton">
+                                <p>Как справиться с экзистенциальным кризисом?</p>
+                                <img src="assets/8453b3379177983932f6.svg">
+                            </button>
+                            <div class="info__subsubblock">
+                               <a>Отчет за 2002 год</a> 
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="news__block block">
-                    <img src="assets/17776b12fa6748200e42.png">
-                    <div class="block-info">
-                    <h3><a href="#">МУП «Водоканал» приглашает горожан посетить парк Аполло</a></h3>
-                    <p>13.02.2022</p>
-                    <a href="#" class="block__link">Перейти</a>
+                    <hr>
+                    <div class="block__accordion information">
+                        <button class="info__button">
+                            <p>Как справиться с экзистенциальным кризисом?</p>
+                            <img src="assets/8453b3379177983932f6.svg">
+                        </button>
+                        <p class="info__subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                            Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. 
+                            Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, 
+                            nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
                     </div>
-                </div>
-                <div class="news__block block">
-                    <img src="assets/b7666075d2411d2e3d9f.png">
-                    <div class="block-info">
-                        <h3><a href="#">МУП «Водоканал» восстановил более 460 люков с начала года</a></h3>
-                        <p>13.02.2022</p>
-                        <a href="#" class="block__link">Перейти</a>
+                    <hr>
+                    <div class="block__accordion information">
+                        <button class="info__button">
+                            <p>Как справиться с экзистенциальным кризисом?</p>
+                            <img src="assets/8453b3379177983932f6.svg">
+                        </button>
+                        <p class="info__subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                            Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. 
+                            Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, 
+                            nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
                     </div>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -534,6 +434,5 @@
         </div>
         <img class="footer-waves" src="assets/9282fc42641349fa079c.svg">
     </footer>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

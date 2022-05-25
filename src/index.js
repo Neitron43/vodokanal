@@ -1,5 +1,5 @@
 import './style.css'
-
+import './styles/style.scss'
 const sliders = document.querySelectorAll('.swiper')
 sliders.forEach((el) => {
   let mySwiper = new Swiper(el, {
@@ -9,166 +9,101 @@ sliders.forEach((el) => {
   })
 })
 
+
 const user = document.querySelector('.user-select--pc')
 const userMobile = document.querySelector('.user-select--mobile')
-const linksList = document.querySelector('.nav') 
-const linksListMobile = document.querySelector('.mobile__nav')
+const linksListFiz = document.querySelector('.nav.fiz')
+const linksListJur = document.querySelector('.nav.jur')  
+const linksListMobileFiz = document.querySelector('.mobile__nav.fiz')
+const linksListMobileJur = document.querySelector('.mobile__nav.jur')
 
-user.addEventListener("change", function() {
-  if (this.value == 'individual') {
-    user.className = 'user-select--pc fiz';
-    linksList.innerHTML = `
-      <li><a class="nav__link" href="#">Оплатить услуги МУП “Водоканал”</a></li>
-      <li><a class="nav__link" href="#">Часто задаваемые вопросы</a></li>
-      <li><a class="nav__link" href="#">Электронные услуги</a></li>
-      <li><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <li><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-    `
-    userMobile.className = 'user-select--mobile fiz'
-    linksListMobile.innerHTML = `
-      <li><a class="nav__link" href="#">Оплатить услуги МУП “Водоканал”</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Часто задаваемые вопросы</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Электронные услуги</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-      <hr class="menu__stripe--secondary">
-    `
-  } else if (this.value == 'juridical') {
-    userMobile.className = 'user-select--mobile jur'
-    user.className = 'user-select--pc jur';
-    linksList.innerHTML = `
-      <li class='jur'><a class="nav__link" href="#">Электронные услуги</a></li>
-      <li class='jur'><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <li class='jur'><a class="nav__link" href="#">Электронная очередь</a></li>
-      <li class='jur'><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-    `
-    linksListMobile.innerHTML = `
-      <li class='jur'><a class="nav__link" href="#">Электронные услуги</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Электронная очередь</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-      <hr class="menu__stripe--secondary">
-    `
+if (user) {
+  user.addEventListener("change", function() {
+    if (this.value == 'individual') {
+      user.className = 'user-select--pc fiz';
+      linksListFiz.className = 'nav fiz active'
+      linksListJur.className = 'nav jur'
+    } else if (this.value == 'juridical') {
+      user.className = 'user-select--pc jur';
+      linksListJur.className = 'nav jur active'
+      linksListFiz.className = 'nav fiz'
+    }
+  })
+}
+
+if (userMobile) {
+  userMobile.addEventListener("change", function() {
+    if (this.value == 'individual') {
+      userMobile.className = 'user-select--mobile fiz'
+      linksListMobileFiz.className = 'mobile__nav fiz active'
+      linksListMobileJur.className = 'mobile__nav jur'
+      
+    } else if (this.value == 'juridical') {
+      userMobile.className = 'user-select--mobile jur'
+      linksListMobileJur.className = 'mobile__nav jur active'
+      linksListMobileFiz.className = 'mobile__nav fiz'
+    }
+  })
+  
+}
+
+const searchButton = document.querySelector('.search__button')
+const searchButtonMobile = document.querySelector('.search__button--mobile')
+const searchCross = document.querySelector('.search__cross')
+const searchCrossMobile = document.querySelector('.search__cross--mobile')
+const searchForm = document.querySelector('.info__search')
+const searchFormMobile = document.querySelector('.info__search--mobile')
+const infoList = document.querySelector('.info__list')
+const infoMail = document.querySelector('.info__mail')
+
+if (searchForm) {
+  searchButton.addEventListener('click', function() {
+    searchForm.classList.toggle('_active')
+    searchCross.classList.toggle('_active')
+    infoList.classList.toggle('_active')
+    infoMail.classList.toggle('_active')
+  })
+  searchButtonMobile.addEventListener('click', function() {
+    searchFormMobile.classList.toggle('_active')
+    searchCrossMobile.classList.toggle('_active')
+  })
+  searchCross.addEventListener('click', function() {
+    searchForm.classList.toggle('_active')
+    searchCross.classList.toggle('_active')
+    infoMail.classList.toggle('_active')
+    infoList.classList.toggle('_active')
+  })
+  searchCrossMobile.addEventListener('click', function() {
+    searchFormMobile.classList.toggle('_active')
+    searchCrossMobile.classList.toggle('_active')
+  })
+  searchForm.addEventListener('submit', handleSearch)
+  function handleSearch() {
+    event.preventDefault()
+    console.log('!')
   }
-})
+}
 
-userMobile.addEventListener("change", function() {
-  if (this.value == 'individual') {
-    userMobile.className = 'user-select--mobile fiz'
-    linksListMobile.innerHTML = `
-      <li><a class="nav__link" href="#">Оплатить услуги МУП “Водоканал”</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Часто задаваемые вопросы</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Электронные услуги</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <hr class="menu__stripe--secondary">
-      <li><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-      <hr class="menu__stripe--secondary">
-    `
-  } else if (this.value == 'juridical') {
-    userMobile.className = 'user-select--mobile jur'
-    linksListMobile.innerHTML = `
-      <li class='jur'><a class="nav__link" href="#">Электронные услуги</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Перечень платных услуг</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Электронная очередь</a></li>
-      <hr class="menu__stripe--secondary">
-      <li class='jur'><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
-      <hr class="menu__stripe--secondary">
-    `
-  }
-})
 
-const timetable = document.querySelector('.info-timetable')
+const timetableStreet1 = document.querySelector('.info-timetable.str1')
+const timetableStreet2 = document.querySelector('.info-timetable.str2')
 const adress = document.querySelector('.adress-select')
 
+if (adress) {
   adress.addEventListener("change", function(){
     if (this.value == 'Vorovskogo') {
-      timetable.innerHTML = `<ul class="info-timetable--weekdays">
-          <li>
-              <span class="timetable__span weekday">Пн:</span>
-              <p class="timetable__ph">8:00 - 18:00</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Вт:</span>
-              <p class="timetable__ph">8:00 - 18:00</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Ср:</span>
-              <p class="timetable__ph">8:00 - 16:30</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Чт:</span>
-              <p class="timetable__ph">8:00 - 18:00</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Пт:</span>
-              <p class="timetable__ph">8:00 - 17:00</p>
-          </li>
-      </ul>
-      <ul class="info-timetable--weekends">
-          <li>
-              <span class="timetable__span weekend">Сб:</span>
-              <p class="timetable__ph">Выходной</p>
-          </li>
-          <li>
-              <span class="timetable__span weekend">Вс:</span>
-              <p class="timetable__ph">Выходной</p>
-          </li>
-      </ul>
-      `;
+      timetableStreet1.className = 'info-timetable str1 active'
+      timetableStreet2.className = 'info-timetable str2'
     } else if (this.value == 'Militseyskaya') {
-      timetable.innerHTML = `
-        <ul class="info-timetable--weekdays">
-          <li>
-              <span class="timetable__span weekday">Пн:</span>
-              <p class="timetable__ph">Вставьте своё время</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Вт:</span>
-              <p class="timetable__ph">8:00 - 18:00</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Ср:</span>
-              <p class="timetable__ph">8:00 - 16:30</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Чт:</span>
-              <p class="timetable__ph">8:00 - 18:00</p>
-          </li>
-          <li>
-              <span class="timetable__span weekday">Пт:</span>
-              <p class="timetable__ph">8:00 - 17:00</p>
-          </li>
-      </ul>
-      <ul class="info-timetable--weekends">
-          <li>
-              <span class="timetable__span weekend">Сб:</span>
-              <p class="timetable__ph">Выходной</p>
-          </li>
-          <li>
-              <span class="timetable__span weekend">Вс:</span>
-              <p class="timetable__ph">Выходной</p>
-          </li>
-      </ul>
-      `
+      timetableStreet2.className = 'info-timetable str2 active'
+      timetableStreet1.className = 'info-timetable str1'
     }
   });
+}
 
 const list = document.querySelector('.mobile-upper-info')
 list.addEventListener('click', () => {
   let li = event.target.closest('li')
-  console.log(li)
   if (!li) return;
   if (!list.contains(li)) return;
   li.classList.toggle('_active')
@@ -176,18 +111,93 @@ list.addEventListener('click', () => {
 
 const iconMobile = document.querySelector('.info__icon--mobile')
 const headerMobile = document.querySelector('.header-mobile')
-iconMobile.addEventListener('click', () => {
-  headerMobile.classList.toggle('_active')
-  iconMobile.classList.toggle('_active')
-  document.body.classList.toggle('lock')
-})
-
-const menuStripe = document.querySelector('.menu__stripe')
-menuStripe.addEventListener('touchmove', () => {
-  if (headerMobile.className == ('header-mobile _active')) {
+if (iconMobile) {
+  iconMobile.addEventListener('click', () => {
     headerMobile.classList.toggle('_active')
     iconMobile.classList.toggle('_active')
     document.body.classList.toggle('lock')
-  }
-})
+  })
+}
 
+const menuStripe = document.querySelector('.menu__stripe')
+if (menuStripe) {
+  menuStripe.addEventListener('touchmove', () => {
+    if (headerMobile.className == ('header-mobile _active')) {
+      headerMobile.classList.toggle('_active')
+      iconMobile.classList.toggle('_active')
+      document.body.classList.toggle('lock')
+    }
+  })
+}
+
+const form = document.querySelector('.sub-news__form')
+const formInput = document.querySelector('.form__email')
+if (form) {
+  form.addEventListener('submit', formSubmit)
+  function formSubmit() {
+    event.preventDefault()
+    console.log(formInput.value)
+  }
+}
+
+
+const faqList = document.querySelector('.block__info')
+const blockAccordionSub = document.querySelector('.block__accordion.subinformation')
+if (faqList) {
+  faqList.addEventListener('click', () => {
+    if (event.target.closest('button').className == 'info__button') {
+      event.target.closest('.block__accordion.information').classList.toggle('_active')
+      blockAccordionSub.classList.remove('_active')
+    } else if (event.target.closest('button').className == 'info__subbutton') {
+      event.target.closest('.block__accordion.subinformation').classList.toggle('_active');
+      console.log(event.target.closest('.info__subsubblock'))
+    }
+  })
+}
+
+const vacancyList = document.querySelector('.block__info.vacancy')
+const vacancyModal = document.querySelector('.block__modal')
+
+if (vacancyList) {
+  vacancyList.addEventListener('click', () => {
+    if (event.target.className == 'info__send') {
+      vacancyModal.classList.toggle('active')
+      document.body.classList.toggle('disabled')
+    }
+  })
+}
+
+const modalRemove = document.querySelector('.modal__cross--main')
+
+if(modalRemove) {
+  modalRemove.addEventListener('click', function() {
+    vacancyModal.classList.toggle('active')
+    document.body.classList.toggle('disabled')
+  })
+}
+
+const modalAttach = document.querySelector('.modal__attach')
+const modalSend = document.querySelector('.modal__send')
+const fileName = document.querySelector('.modal-file__name')
+const modalInfo = document.querySelector('.modal__attach--info')
+const fileRemove = document.querySelector('.modal__cross--file')
+
+if(modalAttach) {
+  modalAttach.addEventListener('change', function() {
+    if (this.value) {
+      fileName.innerHTML = `${modalAttach.files[0].name}`
+      modalAttach.classList.toggle('disabled')
+      modalSend.classList.toggle('active')
+      modalInfo.classList.toggle('active')
+    }
+  })
+}
+
+if(fileRemove) {
+  fileRemove.addEventListener('click', function() {
+      fileName.innerHTML = ``
+      modalAttach.classList.toggle('disabled')
+      modalSend.classList.toggle('active')
+      modalInfo.classList.toggle('active')
+  })
+}

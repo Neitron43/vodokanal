@@ -1,0 +1,42 @@
+.block__main {
+    & .block__buttons {
+        & .button--main {
+            position: relative;
+            text-align: left;
+            background-color: transparent;
+            width: 100%;
+            border-top: 1px solid #E7E7E7;
+            border-bottom: 1px solid #E7E7E7;
+            &:hover::before {
+                position: absolute;
+                content: '';
+                padding: 0 2px;
+                height: 100%;
+                background-color: #0883D1;
+                transform: translate(0px, 0%);
+            }
+            &:hover p {
+                margin-left: 16px;
+            }
+            & p {
+                display: block !important;
+                color: #747474;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                padding: 16px 0;
+                margin-bottom: 0;
+                
+            }
+        }
+
+    }
+    & .block__info.about {
+        & .block__ph {
+            font-size: 16px;
+            line-height: 19px;
+            color: #3B3B3A;
+            margin: 20px 0;
+        }
+    }
+}

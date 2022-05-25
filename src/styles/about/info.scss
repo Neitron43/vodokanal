@@ -1,0 +1,113 @@
+.block__accordion{
+    & .info__button {
+        position: relative;
+        width: 100%;
+        margin: 20px 0 20px !important;
+        background: none;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        & p {
+            display: block !important;
+            font-weight: 700;
+            font-size: 24px !important;
+            line-height: 28px !important;
+            color: #2B2B2B;
+            margin-bottom: 0;
+        }
+        & img {
+            transition: 0.3s;
+            width: 16px;
+            height: 8px;
+        }
+    }
+    & .info__subbutton {
+        width: 100%;
+        display: none;
+    }
+    & .info__subsubblock {
+        display: none;
+    }
+    &.subinformation {
+        & .info__subbutton {
+            position: relative;
+            width: 100%;
+            margin: 20px 0 20px;
+            background: none;
+            text-align: left;
+            padding: 0 0 0 20px;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            & p {
+                color: #2B2B2B !important;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                
+            }
+            & img {
+                transition: 0.3s;
+                position: absolute;
+                transition: rotate(0deg);
+                right: 0;
+                filter: none ;
+                width: 16px;
+                height: 8px;
+            }
+        }
+        & .info__subsubblock {
+            display: none;
+        }
+    }
+}
+.block__accordion._active.information {
+    & .info__button {
+        & p {
+            color: #0883D1;
+        }
+        & img {
+            transform: rotate(180deg);
+            filter: invert(43%) sepia(63%) saturate(4412%) hue-rotate(182deg) brightness(91%) contrast(94%);
+        }
+    }
+    & .block__accordion.subinformation {
+        & .info__subbutton {
+            display: flex !important;
+        }
+        &._active {
+            & .info__subsubblock {
+                display: block;
+            }
+            & p {
+                color: #0883D1 !important;
+            }
+            & img {
+                transform: rotate(180deg);
+                filter: invert(43%) sepia(63%) saturate(4412%) hue-rotate(182deg) brightness(91%) contrast(94%);
+            }
+        }
+    }
+    & .info__subsubblock {
+        margin: 20px 0;
+        & a {
+            background: none;
+            font-size: 20px;
+            line-height: 23px;
+            color: #0883D1;
+            margin-left: 40px;
+            &::before {
+                content: '';
+                padding: 19px 18px;
+                margin-right: 20px;
+                background: url('../img/file-info.svg') no-repeat center;
+            }
+        }
+    }
+    & .info__subsubblock._active {
+        display: block;
+    }
+}

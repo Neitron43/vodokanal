@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
     <link
         rel="stylesheet"
@@ -66,7 +67,12 @@
                                 </ul>
                             </li>
                         </ul>
-                        <button class="info__search"><img src="./img/search-button.svg" alt="Поиск"></button>
+                        <button class="search__button"><img src="./img/search-button.svg" alt="Поиск"></button>
+                        <form class="info__search">
+                            <input type="text" class="search__input" placeholder="Введите запрос для поиска">
+                            <button type="submit" class="search__find">Найти</button>
+                        </form>
+                        <button class="search__cross"><img src="./img/cross-header.svg"></button>
                         <button class="info__glasses"><img src="./img/glasses-button.svg" alt="Версия для слабовидящих"></button>
                     </nav>
                     <div class="upper-info--mobile">
@@ -74,7 +80,13 @@
                             <span></span>
                         </div>
                         <div class="info-buttons--mobile">
-                            <button class="info__search"><img src="./img/search-button.svg" alt="Поиск"></button>
+                            <button class="search__button--mobile"><img src="./img/search-button.svg" alt="Поиск"></button>
+                            <form class="info__search--mobile">
+                                <input type="text" class="search__input" placeholder="Введите запрос для поиска">
+                                <button type="submit" class="search__find">Найти</button>
+                            </form>
+                            <button class="search__cross--mobile"><img src="./img/cross-header.svg"></button>
+                            
                             <ul class="info__list number">
                                 <li>
                                     <a class="list__link number" href="#">8 (8332) 256-256</a>
@@ -95,12 +107,18 @@
                 <div class="mid">
                     <img src="./img/vodokanal-logo.svg">
                     <nav class="mid__nav">
-                        <ul class="nav">
+                        <ul class="nav fiz active">
                             <li><a class="nav__link" href="#">Оплатить услуги МУП “Водоканал”</a></li>
                             <li><a class="nav__link" href="#">Часто задаваемые вопросы</a></li>
                             <li><a class="nav__link" href="#">Электронные услуги</a></li>
                             <li><a class="nav__link" href="#">Перечень платных услуг</a></li>
                             <li><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
+                        </ul>
+                        <ul class="nav jur">
+                            <li class='jur'><a class="nav__link" href="#">Электронные услуги</a></li>
+                            <li class='jur'><a class="nav__link" href="#">Перечень платных услуг</a></li>
+                            <li class='jur'><a class="nav__link" href="#">Электронная очередь</a></li>
+                            <li class='jur'><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
                         </ul>   
                     </nav>
                     <a class="mid__account"href="#">Личный кабинет</a>
@@ -181,7 +199,7 @@
                         <a class="mobile-info__mail" href="mailto:support@vdkanal.ru">support@vdkanal.ru</a>
                         <hr class="menu__stripe--secondary">
                         <nav class="nav">
-                            <ul class="mobile__nav">
+                            <ul class="mobile__nav fiz active">
                                 <li><a class="nav__link" href="#">Оплатить услуги МУП “Водоканал”</a></li>
                                 <hr class="menu__stripe--secondary">
                                 <li><a class="nav__link" href="#">Часто задаваемые вопросы</a></li>
@@ -192,7 +210,17 @@
                                 <hr class="menu__stripe--secondary">
                                 <li><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
                                 <hr class="menu__stripe--secondary">
-                            </ul>   
+                            </ul> 
+                            <ul class="mobile__nav jur">
+                                <li class='jur'><a class="nav__link" href="#">Электронные услуги</a></li>
+                                <hr class="menu__stripe--secondary">
+                                <li class='jur'><a class="nav__link" href="#">Перечень платных услуг</a></li>
+                                <hr class="menu__stripe--secondary">
+                                <li class='jur'><a class="nav__link" href="#">Электронная очередь</a></li>
+                                <hr class="menu__stripe--secondary">
+                                <li class='jur'><a class="nav__link" href="#">Технологическое присоединение к централизованным сетям</a></li>
+                                <hr class="menu__stripe--secondary">
+                            </ul>  
                         </nav>
                         <a class="mobile__account"href="#">Личный кабинет</a>
                         <hr class="menu__stripe--secondary">
@@ -206,7 +234,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide main first">
                 <div class="slide-wrapper">
-                    <h2>Водоканал - неотъемлемая часть города</h2>
+                    <h1>Водоканал - неотъемлемая часть города</h1>
                 </div>
               </div>
               <div class="swiper-slide main second">Slide 2</div>
@@ -266,18 +294,52 @@
                 </div>    
                 <div class="info-bottom-right">
                     <form>
-                    <h3>Выберите адрес:</h3>
+                    <h5>Выберите адрес:</h5>
                     <select name="adress" class="adress-select">
                         <option value="Vorovskogo">Воровского</option>
                         <option value="Militseyskaya">Милицейская</option>
                     </select>
                     </form>
-                    <h3 class="info-timetable__header">Режим работы отдела по работе с физическими лицами:</h3>
-                    <div class="info-timetable">
+                    <h5 class="info-timetable__header">Режим работы отдела по работе с физическими лицами:</h5>
+                    <div class="info-timetable str1 active">
                         <ul class="info-timetable--weekdays">
                             <li>
                                 <span class="timetable__span weekday">Пн:</span>
                                 <p class="timetable__ph">8:00 - 18:00</p>
+                            </li>
+                            <li>
+                                <span class="timetable__span weekday">Вт:</span>
+                                <p class="timetable__ph">8:00 - 18:00</p>
+                            </li>
+                            <li>
+                                <span class="timetable__span weekday">Ср:</span>
+                                <p class="timetable__ph">8:00 - 16:30</p>
+                            </li>
+                            <li>
+                                <span class="timetable__span weekday">Чт:</span>
+                                <p class="timetable__ph">8:00 - 18:00</p>
+                            </li>
+                            <li>
+                                <span class="timetable__span weekday">Пт:</span>
+                                <p class="timetable__ph">8:00 - 17:00</p>
+                            </li>
+                        </ul>
+                        <ul class="info-timetable--weekends">
+                            <li>
+                                <span class="timetable__span weekend">Сб:</span>
+                                <p class="timetable__ph">Выходной</p>
+                            </li>
+                            <li>
+                                <span class="timetable__span weekend">Вс:</span>
+                                <p class="timetable__ph">Выходной</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-timetable str2">
+                        <ul class="info-timetable--weekdays">
+                            <li>
+                                <span class="timetable__span weekday">Пн:</span>
+                                <p class="timetable__ph">Вставьте своё время</p>
                             </li>
                             <li>
                                 <span class="timetable__span weekday">Вт:</span>
@@ -361,18 +423,18 @@
             <div class="sub">
                 <img class="sub-waves" src="./img/sub-waves.svg">
                 <div class="sub-news">
-                    <h2>Подписывайтесь на наши новости</h2>
-                    <div class="sub-news__form">
+                    <h4>Подписывайтесь на наши новости</h4>
+                    <form onsubmit="" class="sub-news__form">
                         <div class="form__input">
-                            <input placeholder="E-mail">
+                            <input type="email" class="form__email"placeholder="E-mail">
                             <p>Вы соглашаетесь <a>с политикой конфиденциальности</a></p>
                         </div>
-                        <button>Подписаться</button>
-                    </div>
+                        <button type="submit">Подписаться</button>
+                    </form>
                 </div>
                 <hr>
                 <div class="sub-social">
-                    <h2>Подписывайтесь на наши соцсети</h2>
+                    <h4>Подписывайтесь на наши соцсети</h4>
                     <div class="sub-social-links">
                         <a href="#"><img src="./img/sub-vk.svg"></a>
                         <a href="#"><img src="./img/sub-yt.svg"></a>

@@ -15,7 +15,52 @@ module.exports = {
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
         template: './src/index.html'
-    })],
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/faq.html',
+        filename: 'faq.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/about.html',
+        filename: 'about.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/administration.html',
+        filename: 'administration.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/vacancy.html',
+        filename: 'vacancy.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/contacts.html',
+        filename: 'contacts.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/history.html',
+        filename: 'history.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/about/info.html',
+        filename: 'info.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/dispatch/dispatch.html',
+        filename: 'dispatch.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/dispatch/disable.html',
+        filename: 'disable.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/dispatch/quality.html',
+        filename: 'quality.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/dispatch/report.html',
+        filename: 'report.html'
+    }),
+    ],
     module: {
         rules: [
             {

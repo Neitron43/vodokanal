@@ -1,0 +1,183 @@
+.block {
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    & .block__background {
+        position: absolute;
+        width: 100%;
+        height: 288px;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: -10;
+        background: url('../img/faq-background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
+.block__head {
+    & h2 {
+        color: #FFFFFF;
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: 700;
+    }
+}
+.block__path {
+    display: flex;
+    flex-direction: row;
+    margin: 33px 0 16px;
+    & a {
+        color: #FFFFFF;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    & span {
+        color: #FFFFFF;
+        margin: 0 8px;
+    }
+    & p {
+        font-size: 16px;
+        line-height: 19px;
+        color: #65B9DF;
+    }
+}
+.wrapper.main {
+    @media (max-width: 640px) {
+        margin: 0;
+    }
+}
+.block__main {
+    padding: 32px 24px;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3.4fr 8fr;
+    gap: 30px;
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+    &::after {
+        content: 0;
+        display: none !important;
+    }
+    & .block__buttons {
+        display: flex;
+        flex-direction: column;
+        & .button--main.faq, & .button--main.active {
+            position: relative;
+            text-align: left;
+            background-color: transparent;
+            width: 100%;
+            border-top: 1px solid #E7E7E7;
+            border-bottom: 1px solid #E7E7E7;
+            &::before {
+                position: absolute;
+                content: '';
+                padding: 0 2px;
+                width: 4px;
+                height: 100%;
+                background-color: #0883D1;
+                transform: translate(0px, 0%);
+            }
+            & p {
+                display: block !important;
+                color: #0883D1;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                padding: 16px 0;
+                margin-left: 16px;
+                margin-bottom: 0;
+                
+            }
+        }
+        & .button--additional {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+            padding: 67px 24px;
+            & img {
+                width: 69px;
+                height: 76px;
+            }
+            & p {
+                margin-bottom: 0;
+                text-align: left;
+                margin-left: 20px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                color: #2B2B2B;
+            }
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+    & .block__info {
+        & hr {
+            width: 100%;
+            background-color: #E7E7E7;
+            height: 1px;
+        }
+        & h2 {
+            padding: 16px 0 20px;
+        }
+        & .block__accordion {
+            & .info__button {
+                position: relative;
+                width: 100%;
+                margin: 20px 0 20px 10px;
+                background: none;
+                text-align: left;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                & p {
+                    display: block !important;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #2B2B2B;
+                    margin-bottom: 0;
+                }
+                & img {
+                    transition: 0.3s;
+                    width: 16px;
+                    height: 8px;
+                }
+            }
+            & .info__subtext {
+                padding-left: 10px;
+                font-size: 16px;
+                line-height: 19px;
+                color: #2B2B2B;
+                width: 95%;
+                display: none;
+                margin-bottom: 16px;
+            }
+        }
+        & .block__accordion._active {
+            & .info__button {
+                & p {
+                    color: #0883D1;
+                }
+                & img {
+                    transform: rotate(180deg);
+                    filter: invert(43%) sepia(63%) saturate(4412%) hue-rotate(182deg) brightness(91%) contrast(94%);
+                }
+            }
+            & .info__subtext {
+                display: block !important;
+            }
+        }
+    }
+}

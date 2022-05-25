@@ -1,0 +1,57 @@
+.block__info.administration {
+    & h2 {
+        font-size: 32px;
+        line-height: 38px;
+        color: #2B2B2B;
+    }
+    & .block__card {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        gap: 30px;
+        @media (max-width: 640px) {
+            position: relative;
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            & img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+        & img {
+            width: 180px;
+            height: 220px;
+        }
+        & .card__info {
+            & h4 {
+                margin-bottom: 8px;
+            }
+            & p {
+                color: #747474;
+                margin-bottom: 20px;
+            }
+            & .card__contacts {
+                display: flex;
+                flex-direction: column;
+                & .contact__phone, & .contact__email {
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 8px;
+                    color: #0883D1;
+                }
+                & .contact__phone::before {
+                    content: '';
+                    padding: 10px;
+                    margin-right: 14px;
+                    background: url('../img/contact-phone.svg') no-repeat center;
+                }
+                & .contact__email::before {
+                    content: '';
+                    margin-right: 14px;
+                    background: url('../img/contact-mail.svg') no-repeat center;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

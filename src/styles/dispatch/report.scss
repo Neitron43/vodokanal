@@ -1,0 +1,78 @@
+.block__form {
+    display: flex;
+    flex-direction: column;
+    width: 624px;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+    & input, & textarea {
+        background: #FFFFFF;
+        border: 1px solid #65B9DF;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-bottom: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #747474;      
+    }
+    & textarea {
+        height: 109px;
+    }
+    & .block__checkbox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 65%;
+        & p {
+            margin-left: 12px;
+        }
+        & .input__checkbox {
+           transform: scale(1.51);
+           opacity: 0.5;
+           width: 20px !important;
+        }
+    }
+    & .form__hint {
+        font-size: 12px;
+        line-height: 14px;
+        color: #0883D1;
+        background: #EDF6FC;
+        border-radius: 2px;
+        width: 65%;
+        padding: 6px 0;
+        margin-bottom: 12px;
+        &::before {
+            content: '';
+            background: url('../img/hint-modal.svg') no-repeat center;
+            padding: 5px;
+            margin: 0 8px;
+        }
+    }
+    & .input__addfile, & .input__submit {
+        width: 30%;
+        padding: 11px 0;
+    }
+    & .input__addfile {
+        &::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        &::before {
+                content: 'Прикрепить';
+                display: inline-block;
+                padding: 5px 45px;
+                outline: none;
+                color: #0883D1;
+                white-space: nowrap;
+                user-select: none;
+                -webkit-user-select: none;
+                width: 108px;
+                cursor: pointer;
+        }
+    }
+    & .input__submit {
+        margin-top: 16px;
+        background: #0883D1;
+        color: #FFFFFF;
+    }
+}
