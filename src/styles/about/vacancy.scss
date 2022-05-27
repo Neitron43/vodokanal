@@ -4,7 +4,8 @@
     }
     .block__accordion.vacancy {
         & .info__button {
-            padding: 20px 0 20px !important;
+            padding: 20px 0 0px !important;
+            margin: 0 !important;
         } 
         & .info__subtext {
             padding: 0 !important;

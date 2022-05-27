@@ -1,0 +1,11 @@
+.block__info.fiz.blocks {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.block__background.fiz {
+    background: url('../img/background-fiz.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}

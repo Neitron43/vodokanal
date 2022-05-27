@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>О компании</title>
 </head>
 <body>
@@ -225,15 +226,17 @@
         </div>
     </header>
     <section class="block dispatch">
-        <div class="block__background"></div>
+        <div class="block__background dispatch"></div>
         <div class="wrapper">
             <div class="block__head dispatch">
-                <h2>О ПРЕДПРИЯТИИ</h2>
+                <h2>Диспетчерская</h2>
                 <img src="../../img/blue-stripe.svg">
                 <div class="block__path dispatch">
                     <a href="/">Главная</a>
                     <span>~</span>
-                    <p>О предприятии</p>
+                    <a href="/">Диспетчерская</a>
+                    <span>~</span>
+                    <p>Качество воды</p>
                 </div>
             </div>
         </div>
@@ -242,14 +245,65 @@
                 <div class="block__buttons dispatch">
                     <form action="/about.html"><button class="button--main dispatch"><p>Сообщить о проблеме</p></button></form>
                     <form action="/"><button class="button--main dispatch"><p>Отключения</p></button></form>
-                    <form action="/"><button class="button--main dispatch"><p>Качество воды</p></button></form>
+                    <form action="/"><button class="button--main active dispatch"><p>Качество воды</p></button></form>
                     <button class="button--additional">
                         <img src="../../img/noto_receipt.svg">
                         <p>Оплати квитанцию и получи возврат денежных средств</p>
                     </button>
                 </div>
                 <div class="block__info dispatch">
-                    
+                    <h3>Качество воды</h3>
+                    <h4>Показатели качества воды, подаваемой МУП «Водоканал» в систему центрального водоснабжения г. Кирова</h4>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr >
+                            <th scope="col">Показатель</th>
+                            <th scope="col">Норма СанПиН</th>
+                            <th scope="col">Факт</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Мутность (мг/литр)</td>
+                            <td>1,5</td>
+                            <td>мен. 0,58</td>
+                          </tr>
+                          <tr>
+                            <td>Цветность (градусов)</td>
+                            <td>20</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td>рН</td>
+                            <td>6-9</td>
+                            <td>7,4</td>
+                          </tr>
+                          <tr>
+                            <td>Жесткость (экв.мл. на литр)</td>
+                            <td>7</td>
+                            <td>3,9</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <h4>Показатели воды в реке Вятке (водозабор г. Кирова)</h4>
+                    <table class="table table-striped">
+                        <thead>
+                          <tr >
+                            <th scope="col">Показатель</th>
+                            <th scope="col">Факт</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Мутность (мг/литр)</td>
+                            <td>2,3</td>
+                          </tr>
+                          <tr>
+                            <td>Цветность (градусов)</td>
+                            <td>14</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>

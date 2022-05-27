@@ -1,0 +1,23 @@
+.block__date {
+    color: #747474;
+}
+.block__share {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    & p{
+        color: #747474;
+        margin-right: 10px;
+    }
+    & img {
+        margin: 0 5px;
+    }
+}
+.news-blocks.news-page {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 0;
+    & .block {
+        padding: 0;
+    }
+}

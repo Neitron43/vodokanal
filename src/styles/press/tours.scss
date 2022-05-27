@@ -1,0 +1,5 @@
+.block__ph--link {
+    &::after {
+        content: none !important;
+    }
+}

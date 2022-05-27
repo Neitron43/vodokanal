@@ -240,7 +240,7 @@
         <div class="wrapper main">
             <div class="block__main dispatch">
                 <div class="block__buttons dispatch">
-                    <form action="/about.html"><button class="button--main dispatch"><p>Сообщить о проблеме</p></button></form>
+                    <form action="/about.html"><button class="button--main active dispatch"><p>Сообщить о проблеме</p></button></form>
                     <form action="/"><button class="button--main dispatch"><p>Отключения</p></button></form>
                     <form action="/"><button class="button--main dispatch"><p>Качество воды</p></button></form>
                     <button class="button--additional">
@@ -249,7 +249,22 @@
                     </button>
                 </div>
                 <div class="block__info dispatch">
-                    
+                    <hr>
+                    <h3>Сообщить о проблеме</h3>
+                    <form class="block__form" nctype="multipart/form-data">
+                        <input placeholder="Имя" class="input__name" type="text">
+                        <input placeholder="+7 (___) ___-__-__" class="input__phone" type="tel">
+                        <textarea placeholder="Сообщение"></textarea>
+                        <input placeholder="Адрес" class="input__adress" type="text">
+                        <input placeholder="Номер лицевого счёта" class="input__account" type="text">
+                        <p class="form__hint">Прикрепите не более 5 файлов общим объемом не более 25 Мб</p>
+                        <input class="input__addfile" type="file" multiple>
+                        <div class="block__checkbox">
+                            <input class="input__checkbox" type="checkbox">
+                            <p>Даю согласие на обработку моих персональных данных</p>
+                        </div>
+                        <input class="input__submit" type="submit">
+                    </form>
                 </div>
             </div>
         </div>

@@ -1,0 +1,9 @@
+.block__info.purchases {
+    & table {
+        & thead {
+            & tr:first-child {
+                border-bottom: 1px solid #0883D1 ;
+            }
+        }
+    }
+}

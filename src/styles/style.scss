@@ -5,10 +5,32 @@
 @import './about/contacts.scss';
 @import './about/history.scss';
 @import './about/info.scss';
+@import './about/comments.scss';
+@import './about/structure.scss';
 @import './dispatch/disable.scss';
 @import './dispatch/dispatch.scss';
 @import './dispatch/quality.scss';
 @import './dispatch/report.scss';
+@import './press/news.scss';
+@import './press/news-page.scss';
+@import './press/social.scss';
+@import './press/tours.scss';
+@import './purchases/all-purchases.scss';
+@import './purchases/documents-purchases.scss';
+@import './purchases/plan-purchases.scss';
+@import './purchases/purchases.scss';
+@import './purchases/purchase-page.scss';
+@import './fiz/fiz.scss';
+@import './fiz/connect-fiz.scss';
+@import './fiz/faq-fiz.scss';
+@import './fiz/query-fiz.scss';
+@import './fiz/service-list-fiz.scss';
+@import './fiz/service-fiz.scss';
+@import './jur/jur.scss';
+@import './jur/connect-jur.scss';
+@import './jur/query-jur.scss';
+@import './jur/service-list-jur.scss';
+@import './jur/service-jur.scss';
 * {
 	padding: 0;
 	margin: 0;
@@ -68,8 +90,8 @@ h4 {
     line-height: 28px;
     @media (max-width: 1024px) {
         font-weight: 700;
-        font-size: 20px;
-        line-height: 23px;       
+        font-size: 20px !important;
+        line-height: 23px !important;       
     }
 }
 h6 {
@@ -418,6 +440,9 @@ ul {
 		margin-right: 25px;
 	}
 }
+.nav {
+	flex-wrap: nowrap;
+}
 .nav.jur {
 	display: none;
 }
@@ -721,6 +746,7 @@ ul {
 	gap: 30px;
 }
 .news__block.block {
+	padding: 0;
 	img {
 		height: auto;
 		width: 100%;
@@ -1444,6 +1470,9 @@ footer {
 	}
 	.info-bottom-right {
 		padding: 24px 20px;
+		& h5 {
+			text-align: left;
+		}
 	}
 	.info {
 		margin: 30px 0px;
@@ -1473,7 +1502,7 @@ footer {
 		grid-template-columns: none;
 		grid-template-rows: repeat(3, 1fr);
 	}
-	.news-block.block {
+	.news__block.block {
 		position: relative;
 		display: grid;
 		grid-template-columns: 2fr 5fr;

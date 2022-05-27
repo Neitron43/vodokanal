@@ -25,6 +25,10 @@ module.exports = {
         filename: 'about.html'
     }),
     new HtmlWebpackPlugin({
+        template: './src/pages/about/comments.html',
+        filename: 'comments.html'
+    }),
+    new HtmlWebpackPlugin({
         template: './src/pages/about/administration.html',
         filename: 'administration.html'
     }),
@@ -45,6 +49,10 @@ module.exports = {
         filename: 'info.html'
     }),
     new HtmlWebpackPlugin({
+        template: './src/pages/about/structure.html',
+        filename: 'structure.html'
+    }),
+    new HtmlWebpackPlugin({
         template: './src/pages/dispatch/dispatch.html',
         filename: 'dispatch.html'
     }),
@@ -59,6 +67,86 @@ module.exports = {
     new HtmlWebpackPlugin({
         template: './src/pages/dispatch/report.html',
         filename: 'report.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/press/news.html',
+        filename: 'news.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/press/news-page.html',
+        filename: 'news-page.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/press/social.html',
+        filename: 'social.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/press/tours.html',
+        filename: 'tours.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/purchases/purchases.html',
+        filename: 'purchases.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/purchases/purchase-page.html',
+        filename: 'purchase-page.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/purchases/all-purchases.html',
+        filename: 'all-purchases.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/purchases/documents-purchases.html',
+        filename: 'documents-purchases.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/purchases/plan-purchases.html',
+        filename: 'plan-purchases.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/connect-fiz.html',
+        filename: 'connect-fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/faq-fiz.html',
+        filename: 'faq-fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/fiz.html',
+        filename: 'fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/query-fiz.html',
+        filename: 'query-fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/service-list-fiz.html',
+        filename: 'service-list-fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/fiz/service-fiz.html',
+        filename: 'service-fiz.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/jur/connect-jur.html',
+        filename: 'connect-jur.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/jur/jur.html',
+        filename: 'jur.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/jur/query-jur.html',
+        filename: 'query-jur.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/jur/service-list-jur.html',
+        filename: 'service-list-jur.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/pages/jur/service-jur.html',
+        filename: 'service-jur.html'
     }),
     ],
     module: {

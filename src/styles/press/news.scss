@@ -1,0 +1,60 @@
+.block__background.press {
+    background: url('../img/background-press.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.block__news {
+    padding: 30px 32px;
+    background: #EDF6FC;
+    border-radius: 5px;
+    position: relative;
+    @media (max-width: 1024px) {
+        & p {
+            text-align: center;
+        }
+        & .card__contacts {
+            text-align: center;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        padding: 35px 50px;
+        background: url('../img/waves-white.png');
+    }
+    & h4 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    & .card__contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        & .contact__phone, & .contact__email {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            color: #0883D1;
+        }
+        & .contact__phone::before {
+            content: '';
+            padding: 10px;
+            margin-right: 11px;
+            background: url('../img/contact-phone.svg') no-repeat center;
+        }
+        & .contact__email::before {
+            content: '';
+            margin-right: 11px;
+            background: url('../img/contact-mail.svg') no-repeat center;
+            padding: 10px;
+        }
+    }
+}

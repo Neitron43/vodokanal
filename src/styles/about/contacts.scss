@@ -74,10 +74,22 @@
                 left: 56px;
                 top: 10px;
                 &.friday {
-                    top: -10px;
+                    top: -7px;
                 }
                 &.weekend {
                     top: 15px;
+                    color: #A0A0A0;
+                }
+                & .timetable__chill {
+                    color: #747474;
+                    font-size: 12px;
+                    line-height: 14px;
+                    &::before {
+                        content: '';
+                        background: url('../img/cup.svg') no-repeat center;
+                        margin-right: 3px;
+                        padding: 4px 6px;
+                    }
                 }
             }
         }

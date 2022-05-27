@@ -1,0 +1,29 @@
+.block__table {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    &.striped {
+        background-color: #EDF6FC;
+    }
+    & .table__text {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    & .table__ph--text {
+        max-width: 85%;
+        &.bold {
+            font-weight: bold;
+        }
+        @media (max-width: 640px) {
+            max-width: 65%;
+        }
+    }
+    & .table__ph--price {
+        text-align: right;
+    }
+}
+.block__header.fiz {
+    margin-top: 20px;
+}

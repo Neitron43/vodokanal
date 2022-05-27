@@ -141,18 +141,28 @@ if (form) {
 }
 
 
-const faqList = document.querySelector('.block__info')
+const listInfo = document.querySelector('.block__info.information')
+const listDefault = document.querySelector('.block__info.default')
 const blockAccordionSub = document.querySelector('.block__accordion.subinformation')
-if (faqList) {
-  faqList.addEventListener('click', () => {
-    if (event.target.closest('button').className == 'info__button') {
+
+if (listInfo) {
+  listInfo.addEventListener('click', () => {
+    if (event.target.closest('button') != null && event.target.closest('button').className == 'info__button') {
       event.target.closest('.block__accordion.information').classList.toggle('_active')
       blockAccordionSub.classList.remove('_active')
-    } else if (event.target.closest('button').className == 'info__subbutton') {
+    } else if (event.target.closest('button') != null && event.target.closest('button').className == 'info__subbutton') {
       event.target.closest('.block__accordion.subinformation').classList.toggle('_active');
-      console.log(event.target.closest('.info__subsubblock'))
+    } else {
+      return;
     }
   })
+}
+if (listDefault) {
+  listDefault.addEventListener('click', function() {
+    if (event.target.closest('button').className == 'info__button') {
+      event.target.closest('.block__accordion').classList.toggle('_active')
+    }
+  }) 
 }
 
 const vacancyList = document.querySelector('.block__info.vacancy')

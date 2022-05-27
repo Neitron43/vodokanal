@@ -11,7 +11,7 @@
         left: 0;
         top: 0;
         z-index: -10;
-        background: url('../img/faq-background.png');
+        background: url('../img/background-default.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
@@ -126,6 +126,9 @@
             width: 100%;
             background-color: #E7E7E7;
             height: 1px;
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
         & h2 {
             padding: 16px 0 20px;
@@ -141,12 +144,9 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                & p {
+                & h5 {
                     display: block !important;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 19px;
-                    color: #2B2B2B;
+                    margin-left: 10px;
                     margin-bottom: 0;
                 }
                 & img {
@@ -167,7 +167,7 @@
         }
         & .block__accordion._active {
             & .info__button {
-                & p {
+                & h5 {
                     color: #0883D1;
                 }
                 & img {
